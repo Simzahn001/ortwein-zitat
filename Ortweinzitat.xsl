@@ -36,11 +36,72 @@
     <general>
       <stylename>Ortweinzitat</stylename>
       <version>2024.10.08</version>
+      <author>Simon Hochenberger (simon.hochenberger@gmail.com)</author>
+      <description>Eine Zitatvorlage, die den Standards der Ortweinschule für Diplomarbeiten entspricht</description>
     </general>
-    <importantfields></importantfields>
-    <citation></citation>
+    <importantfields>
+      <source type="Book">
+        <b:ImportantField>b:Author/b:Author/b:NameList</b:ImportantField>
+        <b:ImportantField>b:Author/b:Author/b:NameList</b:ImportantField>
+        <b:ImportantField>b:Title</b:ImportantField>
+        <b:ImportantField>b:City</b:ImportantField>
+        <b:ImportantField>b:Publisher</b:ImportantField>
+        <b:ImportantField>b:Year</b:ImportantField>
+        <b:ImportantField>b:Edition</b:ImportantField>
+        <b:ImportantField>b:Volume</b:ImportantField>
+      </source>
+      <source type="ArticleInAPeriodical">
+        <b:ImportantField>b:Author/b:Author/b:NameList</b:ImportantField>
+        <b:ImportantField>b:Author/b:Author/b:NameList</b:ImportantField>
+        <b:ImportantField>b:Title</b:ImportantField>
+        <b:ImportantField>b:PeriodicalTitle</b:ImportantField>
+        <b:ImportantField>b:Edition</b:ImportantField>
+        <b:ImportantField>b:Year</b:ImportantField>
+        <b:ImportantField>b:City</b:ImportantField>
+        <b:ImportantField>b:Publisher</b:ImportantField>
+      </source>
+      <source type="InternetSite">
+        <b:ImportantField>b:Author/b:Author/b:NameList</b:ImportantField>
+        <b:ImportantField>b:Author/b:Author/b:NameList</b:ImportantField>
+        <b:ImportantField>b:Title</b:ImportantField>
+        <b:ImportantField>b:URL</b:ImportantField>
+        <b:ImportantField>b:YearAccessed</b:ImportantField>
+        <b:ImportantField>b:MonthAccessed</b:ImportantField>
+        <b:ImportantField>b:DayAccessed</b:ImportantField>
+      </source>
+    </importantfields>
+    <citation>
+      <separator> - </separator>
+      <noauthor>-Author-BookAuthor-Editor-Inventor-"o.A."</noauthor>
+      <notitle>-Title-ShortTitle-</notitle>
+      <noyear>-Year-"o.J."-</noyear>
+      <source type="Book">
+        <format>{%Author:1%: %Title%. {%Edition%. Auflage. }{Bd. %Volume%. }{%City|StateProvince|CountryRegion%: }{%Publisher%, }{%Year%, }S.}</format>
+      </source>
+      <source type="ArticleInAPeriodical">
+        <format>{%Author:1%: %Title%. {In: %PeriodicalTitle%. }{Nr. %Edition%. }{%Year%. }{%City|StateProvince|CountryRegion%: }{%Publisher%. }S.}</format>
+      </source>
+      <source type="InternetSite">
+        <format>{{%Author:1%: }%Title%. {Online im Internet: %URL%. }{%DayAccessed%.%MonthAccessed%.%YearAccessed%.}</format>
+      </source>
+    </citation>
     <bibliography></bibliography>
-    <namelists></namelists>
+    <namelists>
+      <list id="1">
+        <corporate>{%Corporate%}</corporate>
+        <first_person>{%Last%{, %First%{, %Middle%}}}</first_person>
+        <other_persons>{%Last%{, %First%{, %Middle%}}}</other_persons>
+        <separator_between_if_two> ; </separator_between_if_two>
+        <separator_between_if_more_than_two>
+          ;
+        </separator_between_if_more_than_two>
+        <separator_before_last> ; </separator_before_last>
+        <max_number_of_persons_to_display>10</max_number_of_persons_to_display>
+        <number_of_persons_to_display_if_more_than_max>
+          10
+        </number_of_persons_to_display_if_more_than_max>
+      </list>
+    </namelists>
     <strings></strings>
     <extensions></extensions>
   </xsl:variable>
