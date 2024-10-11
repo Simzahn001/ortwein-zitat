@@ -69,6 +69,15 @@
         <b:ImportantField>b:MonthAccessed</b:ImportantField>
         <b:ImportantField>b:DayAccessed</b:ImportantField>
       </source>
+      <!--Use Field "Middle Name" for <Position, Company>!-->
+      <source type="Interview">
+        <b:ImportantField>b:Author/b:Interviewee/b:NameList</b:ImportantField>
+        <b:ImportantField>b:Author/b:Interviewee/b:NameList</b:ImportantField>
+        <b:ImportantField>b:Title</b:ImportantField>
+        <b:ImportantField>b:Year</b:ImportantField>
+        <b:ImportantField>b:Month</b:ImportantField>
+        <b:ImportantField>b:Day</b:ImportantField>
+      </source>
     </importantfields>
     <citation>
       <separator> - </separator>
@@ -84,6 +93,10 @@
       <source type="InternetSite">
         <format>{{%Author:1%: }%Title%. {Online im Internet: %URL%. }{%DayAccessed%.%MonthAccessed%.%YearAccessed%.}</format>
       </source>
+      <!--Use Field "Middle Name" for <Position, Company>!-->
+      <source type="Interview">
+        <format>{%Interviewee:2%: {persönliches Gespräch zum Thema %Title%}{, %Day%.%Month%.%Year%}}</format>
+      </source>
     </citation>
     <bibliography></bibliography>
     <namelists>
@@ -91,6 +104,20 @@
         <corporate>{%Corporate%}</corporate>
         <first_person>{%Last%{, %First%{, %Middle%}}}</first_person>
         <other_persons>{%Last%{, %First%{, %Middle%}}}</other_persons>
+        <separator_between_if_two> ; </separator_between_if_two>
+        <separator_between_if_more_than_two>
+          ;
+        </separator_between_if_more_than_two>
+        <separator_before_last> ; </separator_before_last>
+        <max_number_of_persons_to_display>10</max_number_of_persons_to_display>
+        <number_of_persons_to_display_if_more_than_max>
+          10
+        </number_of_persons_to_display_if_more_than_max>
+      </list>
+      <list id="2">
+        <corporate>{%Corporate%}</corporate>
+        <first_person>{%Last%{, %First%{ (%Middle%)}}}</first_person>
+        <other_persons>{%Last%{, %First%{ (%Middle%)}}}</other_persons>
         <separator_between_if_two> ; </separator_between_if_two>
         <separator_between_if_more_than_two>
           ;
