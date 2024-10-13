@@ -91,14 +91,40 @@
         <format>{%Author:1%: %Title%. {In: %PeriodicalTitle%. }{Nr. %Edition%. }{%Year%. }{%City|StateProvince|CountryRegion%: }{%Publisher%. }S.}</format>
       </source>
       <source type="InternetSite">
-        <format>{{%Author:1%: }%Title%. {Online im Internet: %URL%. }{%DayAccessed%.%MonthAccessed%.%YearAccessed%.}</format>
+        <format>{{%Author:1%: }%Title%. {Online im Internet: %URL%. }{%DayAccessed%.%MonthAccessed%.%YearAccessed%.}}</format>
       </source>
       <!--Use Field "Middle Name" for <Position, Company>!-->
       <source type="Interview">
         <format>{%Interviewee:2%: {persönliches Gespräch zum Thema %Title%}{, %Day%.%Month%.%Year%}}</format>
       </source>
     </citation>
-    <bibliography></bibliography>
+    <bibliography>
+      <columns>1</columns>
+      <source type="Book">
+        <column id="1">
+          <format>{%Author:1%: %Title%. {%Edition%. Auflage. }{Bd. %Volume%. }{%City|StateProvince|CountryRegion%: }{%Publisher%, }{%Year%, }}</format>
+        </column>
+        <sortkey>{%Author:1|Editor:1%}{%Title%}{%Year%}</sortkey>
+      </source>
+      <source type="ArticleInAPeriodical">
+        <column id="1">
+          <format>{%Author:1%: %Title%. {In: %PeriodicalTitle%. }{Nr. %Edition%. }{%Year%. }{%City|StateProvince|CountryRegion%: }{%Publisher%. }}</format>
+        </column>
+        <sortkey>{%Author:1|Editor:1%}{%Title%}{%Year%}</sortkey>
+      </source>
+      <source type="InternetSite">
+        <column id="1">
+          <format>{{%Author:1%: }%Title%. {Online im Internet: %URL%. }{%DayAccessed%.%MonthAccessed%.%YearAccessed%.}}</format>
+        </column>
+        <sortkey>{%Author:1|Editor:1%}{%Title%}{%Year%}</sortkey>
+      </source>
+      <source type="Interview">
+        <column id="1">
+          <format>{%Interviewee:2%: {persönliches Gespräch zum Thema %Title%}{, %Day%.%Month%.%Year%}}</format>
+        </column>
+        <sortkey>{%Interviewee:2%}{%Title%}{%Year%}</sortkey>
+      </source>
+    </bibliography>
     <namelists>
       <list id="1">
         <corporate>{%Corporate%}</corporate>
