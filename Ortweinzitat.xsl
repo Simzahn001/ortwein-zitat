@@ -35,7 +35,7 @@
   <xsl:variable name="data">
     <general>
       <stylename>Ortweinzitat</stylename>
-      <version>2024.10.08</version>
+      <version>2024.10.13</version>
       <author>Simon Hochenberger (simon.hochenberger@gmail.com)</author>
       <description>Eine Zitatvorlage, die den Standards der Ortweinschule für Diplomarbeiten entspricht</description>
     </general>
@@ -155,8 +155,6 @@
         </number_of_persons_to_display_if_more_than_max>
       </list>
     </namelists>
-    <strings></strings>
-    <extensions></extensions>
   </xsl:variable>
 
   <!-- Indicates that all output will be in the HTML format. -->
