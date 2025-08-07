@@ -8,3 +8,8 @@ Bei Ideen, Problemen oder wenn du weitere Quellen bei diesem Zitierstil benötig
 [Allgemeiner Guide, wie man sich von Word beim Zitieren helfen lassen kann!](https://github.com/Simzahn001/ortwein-zitat/wiki/Zitierstile-benutzen-%5BGuide%5D)
 
 [Die Unterstützten Quellentypen](https://github.com/Simzahn001/ortwein-zitat/wiki/Quellentypen)
+
+---
+
+## Reference
+Used the Stylesheet template of [BibWord](https://github.com/codingo/BibWord) <3
