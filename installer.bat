@@ -1,8 +1,8 @@
 @echo off
 setlocal
 
-:: Direktlink zur Raw-Datei auf GitHub
-set "https://github.com/Simzahn001/ortwein-zitat/releases/latest/download/Ortweinzitat.xsl"
+:: Direktlink zur Datei im neuesten GitHub-Release
+set "fileUrl=https://github.com/Simzahn001/ortwein-zitat/releases/latest/download/Ortweinzitat.xsl"
 
 :: Zielverzeichnis für Word-Zitationsstile
 set "targetDir=%APPDATA%\Microsoft\Bibliography\Style"
@@ -24,5 +24,5 @@ if not exist "%targetDir%" (
 echo Verschiebe Datei nach %targetDir%...
 move /Y "%fileName%" "%targetDir%\%fileName%"
 
-echo Fertig! Der Zitierstilist jetzt in Word verfügbar.
+echo Fertig! Der Zitierstil ist jetzt in Word verfügbar.
 pause
