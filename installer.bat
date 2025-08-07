@@ -2,7 +2,7 @@
 setlocal
 
 :: Direktlink zur Raw-Datei auf GitHub
-set "fileUrl=https://raw.githubusercontent.com/Simzahn001/ortwein-zitat/main/Ortweinzitat.xsl"
+set "https://github.com/Simzahn001/ortwein-zitat/releases/latest/download/Ortweinzitat.xsl"
 
 :: Zielverzeichnis für Word-Zitationsstile
 set "targetDir=%APPDATA%\Microsoft\Bibliography\Style"
